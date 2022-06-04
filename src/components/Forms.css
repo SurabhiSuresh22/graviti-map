@@ -1,5 +1,6 @@
 input{
     width: 400px !important;
+    padding-left: 50px  !important;
     height: 60px !important;
     font-weight: bold !important;
     font-size: large !important;
@@ -61,3 +62,19 @@ small{
     top: 10%;
     right: 2%;
 } 
+.form-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 2px 0;
+}
+.icon{
+    position: absolute;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    color: rgb(0, 145, 255);
+}

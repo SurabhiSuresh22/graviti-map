@@ -1,6 +1,7 @@
 import React from 'react'
 import './Forms.css'
 import Map from './Map'
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Form = () => {
 return (
@@ -9,16 +10,22 @@ return (
         <form className='col-md-6'>
             <div className="div1">
                 <div className="form-group">
-                    <label for="">Origin</label>
-                    <input type="text" class="form-control" placeholder="Enter Origin"/>
+                    <label htmlFor="origin">Origin</label>
+                    <div className="form-input">
+                        <span className='icon'><LocationOnIcon style={{color: 'red'}}/></span>
+                        <input type="text" className="form-control" id='origin' placeholder="Enter Origin"/>
+                    </div>
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputPassword1">Destination</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+                    <label htmlFor="destination">Destination</label>
+                    <div className="form-input">
+                        <span className='icon'><LocationOnIcon style={{color: 'red'}}/></span>
+                        <input type="text" className="form-control" id="destination" placeholder="Enter Destination"/>
+                    </div>
                 </div>
             </div>
             <div className="div2">
-                <button type="submit" class="btn btn-primary">Calculate</button>
+                <button type="submit" className="btn btn-primary">Calculate</button>
             </div>
         </form>
 
@@ -30,7 +37,7 @@ return (
         <div  className="display">
             <p><span className='text'>Distance</span><span className='distance'>0 Kms</span></p>
         </div>
-        <small class="form-text text-muted">The distance between <span style={{fontWeight: 'bold'}}>{}</span> and <span style={{fontWeight: 'bold'}}>{}</span> is <span style={{fontWeight: 'bold'}}>{}</span> kms.</small>
+        <small className="form-text text-muted">The distance between <span style={{fontWeight: 'bold'}}>{}</span> and <span style={{fontWeight: 'bold'}}>{}</span> is <span style={{fontWeight: 'bold'}}>{}</span> kms.</small>
         </div>
     </div>
 )
