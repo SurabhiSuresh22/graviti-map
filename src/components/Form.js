@@ -12,7 +12,7 @@ const Form = () => {
     libraries: ['places']
     })
 
-    const [map,setMap] = useState(null)
+    // const [map,setMap] = useState(null)
     const [directionsResp, setDirectionsResp] = useState(null)
     const [distance,setDistance] = useState('')
 
@@ -77,7 +77,7 @@ return (
                 mapTypeControl: false,
                 fullscreenControl: false,
                 keyboardShortcuts: false,
-            }} onLoad={map => setMap(map)}>
+            }} >
 
                 <Marker position={center}/>
                 {directionsResp && (
@@ -92,7 +92,6 @@ return (
         </div>
         {directionsResp && (
                 <small className="form-text text-muted">The distance between <span style={{fontWeight: 'bold'}}>{originRef.current.value}</span> and <span style={{fontWeight: 'bold'}}>{destinationRef.current.value}</span> is <span style={{fontWeight: 'bold'}}>{distance}s.</span></small>)}
-        
         </div>
     </div>
 )
