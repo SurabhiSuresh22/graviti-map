@@ -88,9 +88,11 @@ return (
 
         <div className='dist'>
         <div  className="display">
-            <p><span className='text'>Distance</span><span className='distance'>{distance}s</span></p>
+            <p><span className='text'>Distance</span><span className='distance'>{distance}</span></p>
         </div>
-        <small className="form-text text-muted">The distance between <span style={{fontWeight: 'bold'}}>{originRef.current.value}</span> and <span style={{fontWeight: 'bold'}}>{destinationRef.current.value}</span> is <span style={{fontWeight: 'bold'}}>{distance}s.</span></small>
+        {directionsResp && (
+                <small className="form-text text-muted">The distance between <span style={{fontWeight: 'bold'}}>{originRef.current.value}</span> and <span style={{fontWeight: 'bold'}}>{destinationRef.current.value}</span> is <span style={{fontWeight: 'bold'}}>{distance}s.</span></small>)}
+        
         </div>
     </div>
 )
